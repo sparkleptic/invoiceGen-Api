@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+    /* CSS Document */
+    @font-face {
+        font-family: 'energicos-bold';
+        src: url('./assets/fonts/gilroy-bold-webfont.woff2') format('woff2'),
+             url('./assets/fonts/gilroy-bold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'energicos-semibold';
+        src: url('./assets/fonts/gilroy-semibold-webfont.woff2') format('woff2'),
+             url('./assets/fonts/gilroy-semibold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'energicos-medium';
+        src: url('./assets/fonts/gilroy-medium-webfont.woff2') format('woff2'),
+             url('./assets/fonts/gilroy-medium-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'energicos-regular';
+        src: url('./assets/fonts/gilroy-regular-webfont.woff2') format('woff2'),
+             url('./assets/fonts/gilroy-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+      font-family: 'energicos-icons';
+      src: url('./assets/fonts/fontello.eot');
+      src: url('./assets/fonts/fontello.eot') format('embedded-opentype'),
+           url('./assets/fonts/fontello.woff2') format('woff2'),
+           url('./assets/fonts/fontello.woff') format('woff'),
+           url('./assets/fonts/fontello.ttf') format('truetype'),
+           url('./assets/fonts/fontello.svg') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+    }
+    body{
+      font-family: 'energicos-regular';
+    }
+    ul {
+      list-style-type: none;
+    }
+  </style>  
+</head>
+<body>
+<div class="utility-bill-container" style="background-color: #fff; margin: auto;">
+  <div class="utility-bill-content clearfix" style="background-color: #fff;margin-top: 50px;">
+    
+    <div class="energicos-logo" style="text-align: right;">
+      <img src={{energicos}} width="180mm" alt="energicos logo"/>
+    </div>
+    
+    <div class="key-location" style="text-align: left; font-family: 'energicos-regular'; color: #4a4a4a; font-size: 10px; letter-spacing: 1.3px; margin-bottom: 15px; ">
+      Energicos Norddeutschland GmbH |  Franklinstrasse 9-11 | 10587 Berlin
+    </div>  
+
+    <div class="key-area" style=" text-align: left; color: #666666; line-height: 16px; letter-spacing: 0.75px; font-family: 'energicos-regular'; font-size: 13px;">
+      {{Kundenname}}<br/>
+      {{KD_Strasse}},<br/>
+      {{KD_PLZ_Ort}}
+    </div>
+
+    <div class="address-top clearfix" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 15px;">
+      <div class="address-top-wrap" style="float: right;">
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{datumicon}} style="margin-right:5px; margin-bottom:-4px;margin-top: -10px;" /> Datum :</span>  {{Rechnungsdatum3}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 7px; display: inline-block;"> <img src={{ansprechpartnericon}} style="margin-right:-2px; margin-bottom:-4px;margin-top: -5px;" /> Ansprechpartner :</span> {{Ansprechpartner4}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{telefonicon}} style="margin-right:5px; margin-bottom:-4px; margin-top: -10px;" /> Telefon :</span> <span>030/ 520098-122</span>
+      </div>
+    </div>
+
+    <div class="energicos_key_components clearfix" >
+      <div class="component" style=" width: 19%; float: left;">
+        <div class="component-header" style="background-color: #f5f5f5; width: 100%; padding-top: 25px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.1mm #c30017; margin-bottom: 0.75px; font-family: 'energicos-semibold'; font-size: 11px; color: #404040;"> <img src={{vertragsnummericon}} style="margin-bottom: 5px;" /><br/>
+          Vertragsnummer
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item last" style="border-bottom: 0.1mm solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Vertragsnummer3}}</li>
+        </ul>
+      </div>
+
+      <div class="component" style=" width: 19.5%; float: left; margin-left: 0.75%;">
+        <div class="component-header" style="background-color: #f5f5f5; width: 100%; padding-top: 25px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.1mm #c30017; margin-bottom: 0.75px; font-family: 'energicos-semibold'; font-size: 11px; color: #404040;"> <img src={{objektnummericon}} style="margin-bottom: 5px;" /><br/>
+          Objektnummer
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item last" style="border-bottom: 0.1mm solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Objektnummer3}}</li>
+        </ul>
+
+      </div>
+
+      <div class="component" style=" width: 19.5%; float: left; margin-left: 0.75%;">
+        <div class="component-header" style="background-color: #f5f5f5; width: 100%; padding-top: 25px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.1mm #c30017; margin-bottom: 0.75px; font-family: 'energicos-semibold'; font-size: 11px; color: #404040;"> <img src={{rechungsnummericon}} style="margin-bottom: 5px;" /><br/>
+          Rechnungsnummer
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item last" style="border-bottom: 0.1mm solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Rechnungsnummer3}}</li>
+        </ul>
+      </div>
+
+      <div class="component" style=" width: 19.5%; float: left; margin-left: 0.75%;">
+        <div class="component-header" style="background-color: #f5f5f5; width: 100%; padding-top: 25px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.1mm #c30017; margin-bottom: 0.75px; font-family: 'energicos-semibold'; font-size: 11px; color: #404040;"> <img src={{abrechungszeitraumicon}} style="margin-bottom: 5px;" /><br/>
+          Abrechnungszeitraum
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item last" style="border-bottom: 0.1mm solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Rechnung_bis}} - {{Rechnung_von}}</li>
+        </ul>
+      </div>
+
+      <div class="component" style=" width: 19.5%; float: left; margin-left: 0.75%;">
+        <div class="component-header" style="background-color: #f5f5f5; width: 100%; padding-top: 25px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.1mm #c30017; margin-bottom: 0.75px; font-family: 'energicos-semibold'; font-size: 11px; color: #404040;"> <img src={{zehibetragbruttoicon}} style="margin-bottom: 5px;" /><br/>
+          Zahibetrag brutto
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item last" style="border-bottom: 0.1mm solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">1.5454.70 EUR</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="energicos-letter" style="color: #4a4a4a; font-size: 12px; font-family: energicos-regular; color: #4a4a4a;  text-align: left; padding-bottom:20px;">
+      <p class="salutation" style=" margin-bottom: 5px;" >Sehr geehrter Herr Mustermann,</p>
+      <p style="margin-bottom: 5px;">für den zurückliegenden Zeitraum berechnen wir Ihnen die im folgenden aufgeführten Entgelte. Die Abrechnungsgrundlagen können Sie der beigefügten Aufstellung auf Seite 2 entnehmen.</p>
+    </div>
+
+    <div class="energicos_components_cluster clearfix">
+      <div class="cluster" style=" width: 20.4%; float:left;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">Position</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Position_Grundkosten}}</li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Position_Verbrauchskosten}}</li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Position_Gebühren}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Position_Gutschriften}}</li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Position_Rabatt}}</li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);"><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Position_Zahlbetrag}}  </span></li>
+        </ul>
+      </div>
+      <div class="cluster" style=" width: 16.5%; float:left; margin-left:.3%;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">ERLAUTERUNG</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Erläuterung_Grundkosten}}</li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Erläuterung_Verbrauchskosten}}</li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="blank" style="color: #fff;">{{Erläuterung_Vorauszahlungen}}</span></li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="blank"  style="color: #fff;">{{Erläuterung_Gebühren}}</span></li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="blank" style="color: #fff;">{{Erläuterung_Gutschriften}}</span></li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="blank" style="color: #fff;">{{Erläuterung_Rabatt}}</span></li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);"><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">{{Erläuterung_Zahlbetrag}}</span></li>
+        </ul>
+      </div>
+      <div class="cluster" style=" width: 15.4%; float:left; margin-left:.3%;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">Betrag Netto</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Betrag_netto_Grundkosten}}</li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_netto_Verbrauchskosten}}</li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_netto_Vorauszahlungen}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_netto_Gebühren}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_netto_Gutschriften}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_netto_Rabatt}} </li>
+          <li class="item last"  style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);"><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Betrag_netto_Zahlbetrag}} </span></li>
+        </ul>
+      </div>
+      <div class="cluster" style=" width: 15.4%; float:left; margin-left:.3%;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">Umsatzsteuer</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Grundkosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Verbrauchskosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Vorauszahlungen}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Gebühren}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Gutschriften}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umsatzsteuer_Rabatt}} </li>
+          <li class="item last"  style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);"><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Umsatzsteuer_Zahlbetrag}} </span></li>
+        </ul>
+      </div>
+      <div class="cluster" style=" width: 14.4%; float:left; margin-left:.3%;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">Steuersatz</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Grundkosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Verbrauchskosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Vorauszahlungen}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Gebühren}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Gutschriften}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Steuersatz_Rabatt}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);">
+          <span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Steuersatz_Zahlbetrag}} </span></li>
+        </ul>
+      </div>
+      <div class="cluster" style=" width: 16.4%; float:left; margin-left:.3%;">
+        <div class="cluster-header" style="background-color: rgb(237, 236, 243); border-bottom: solid 0.3px #dddce0; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; margin-bottom: 0.9px; color: #8f0014; text-transform: uppercase; font-size: 11px; letter-spacing: 0.9px; font-family: energicos-medium;">Betrag brutto</div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Grundkosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Verbrauchskosten}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Vorauszahlungen}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Gebühren}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Gutschriften}} </li>
+          <li class="item" style="text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px; color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Betrag_brutto_Rabatt}} </li>
+          <li class="item last"style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242);"><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Betrag_brutto_Zahlbetrag}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-letter" style="color: #4a4a4a; font-size: 12px; font-family: energicos-regular; color: #4a4a4a;  text-align: left; margin-bottom: 15px;">
+      <p style="margin-bottom: 5.4px;">Wenn Sie uns ein SEPA Mandat erteilt haben, werden wir den Restbetrag von Ihrem Konto innerhalb von 14 Tagen mit der Gläubiger ID DE123356066666655 unter der Referenz {Rechnungsnummer} einziehen. Guthaben werden von uns in diesem Zeitraum auf das uns benannte Konto überwiesen.</p>
+      <p style="margin-bottom: 5.4px;">Haben Sie uns bisher keine Einzugsermächtigung erteilt, bitten wir Sie den Rechnungsbetrag innerhalb von 14 Tagen nach Rechnungserhalt zu überweisen.</p>
+      <p style="margin-bottom: 5.4px;">Für die folgende Abrechnungsperiode 2018 ergibt sich ein montlicher Abschlagsbetrag (inklusive Mehrwertsteuer) von {85,00} EUR ab dem 01.01.2018.</p>
+      <p style="margin-bottom: 5.4px;">Wir weisen darauf hin, daß gemäß Energieversorgungsvertrag die Zustimmung zu der vorliegenden Abrechnung als erteilt gilt, falls dieser Abrechnung nicht innerhalb einer Frist von vier Wochen ab Rechnungszugang wiedersprochen wird.</p>
+    </div>
+    <div class="footer-energicos clearfix">
+      <div class="horizontal-divider" style="margin-bottom: 15px;"><hr class="energicos-footer-line" style="border-bottom: 0.37px solid #e1e0e5;" /></div>
+      <div class="footer-component" style=" width: 19%; float: left; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        energicos energy Gmbh<br/>
+        Franklinstrasse 9-11<br/>
+        10587 Berlin
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Sitz der Gesellschaft:<br/>
+        Berlin Amtsgericht<br/>
+        Charlottenburg<br/>
+        HRB 180072 B USt-IdNr.:<br/>
+        DE813522350
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Geschäftsführung<br/>
+        Dipl.BW (FH) Angelika<br/>
+        Hanke<br/>
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00<br/>
+        BIC: HYBNAAHRA
+      </div>
+    </div>
+    <div class="energicos-wave" >
+      <img src={{stripe}} alt="stripe" width="350px"/>
+    </div>
+  </div>
+</div>            
+<div class="utility-bill-container" style="background-color: #fff;margin: auto;">
+  <div class="utility-bill-content"  style="background-color: #fff; margin-top: 50px;">
+    <div class="energicos-logo" style="text-align: right;">
+      <img src={{energicos2}} width="180mm" alt="energicos logo"/>
+    </div>                
+    <div class="key-area" style=" color: #666666; margin-top:10px;">
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 12px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Kundenname :</span> {{Kundenname2}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kundenanschrift :</span> {{KD_Strasse2}} {{KD_PLZ_Ort2}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Vertragsnummer :</span> {{Vertragsnummer4}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kunden-email :</span> {{KD_E_Mail}} </p>
+      
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 0px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Objektnummer :</span> {{Objektnummer4}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Lieferadresse :</span> {{Lieferadresse3}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Rechungsnummer :</span> {{Rechnungsnummer4}}</p>
+      <p class="current-page" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 8px; letter-spacing: 1px;">Seite 2 von 4</p>
+      
+    </div>
+    <div class="address-top clearfix" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 18px; letter-spacing: 0.75px; margin-bottom: 15px;">
+      <div class="address-top-wrap" style="float: right;">
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{datumicon2}} style="margin-right:5px; margin-bottom:-4px;margin-top: -10px;" /> Datum :</span>  {{Rechnungsdatum4}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 7px; display: inline-block;"> <img src={{ansprechpartnericon2}} style="margin-right:-2px; margin-bottom:-4px;margin-top: -5px;" /> Ansprechpartner :</span> {{Ansprechpartner}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{telefonicon2}} style="margin-right:5px; margin-bottom:-4px; margin-top: -10px;" /> Telefon :</span> <span>030/ 520098-122</span>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h5 class="main-title" style="font-family: 'energicos-bold'; color: #404040; letter-spacing: 0.3px; margin-bottom: 5px;">Verbrauchsermittlung und Rechungspositionen Heizwärme</h5>
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Verbräuche im Abrechnungszeitraum</h6>
+    </div>
+    
+    <div class="energicos_key_components_6cols clearfix">
+      <div class="component" style=" width: 14%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zähler<br/> 
+          Nummer
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_MB1_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_MB1_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_MB1_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_MB1_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Zählernummer_MB1_p5}}</span></li>
+        </ul>
+      </div>
+      <div class="component" style=" width: 21%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style=" width: 50%; float:left;">von</div>
+            <div class="side-2" style=" width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_p4}}</li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">{{Zeitraum_von_MB1_p5}}</span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Zeitraum_bis_MB1_p5}} </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style=" width: 21%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zählerstand
+          <div class="sub-columns clearfix">
+            <div class="side-1" style=" width: 50%; float:left;">von</div>
+            <div class="side-2" style=" width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_MB1_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_MB1_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_MB1_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_MB1_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Zählerstand_von_MB1_p5}} </span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_MB1_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_MB1_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_MB1_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_MB1_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Zählerstand_bis_MB1_p5}} </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauch<br/>
+          in kWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_MB1_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_MB1_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_MB1_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_MB1_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px; "> {{Verbrauch_in_Verbrauchseinheit_MB1_p5}} </span></li>
+        </ul>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Umrechung<br/>
+          Faktor
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_MB1_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_MB1_p2}}</li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_MB1_p3}}</li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_MB1_p4}}</li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">{{Umrechnungsfaktor_MB1_p5}}</span></li>
+        </ul>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauch<br/>
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_MB1_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_MB1_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_MB1_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_MB1_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total"  style="font-family: energicos-bold ; font-size: 11px; ">{{Verbrauch_in_MWh_MB1_p5}}</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Verbrauchspreise im Abrechnungszeitraum</h6>
+    </div>                
+    <div class="energicos_key_components_5cols clearfix">
+      <div class="component" style="width: 22%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style="width: 50%; float:left;">von</div>
+            <div class="side-2" style="width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1 " style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_ap1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_ap2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_ap3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_ap4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> Total </span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_ap1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_ap2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_ap3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_ap4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> Blank </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchsmenge<br/> 
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauch_in_MWh_MB1_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauch_in_MWh_MB1_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauch_in_MWh_MB1_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauch_in_MWh_MB1_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">5.752</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Abrechnungspreis<br/>
+          in EUR / MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauchspreis_MB1_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauchspreis_MB1_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauchspreis_MB1_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Verbrauchspreis_MB1_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">  {{Total_Verbrauchspreis_MB1}} </span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Preisänderungs<br/>
+          Faktor
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Änderungsfaktor_MB1_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Änderungsfaktor_MB1_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Änderungsfaktor_MB1_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">  {{Änderungsfaktor_MB1_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">blank</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchskosten<br/>
+          netto in EUR
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Verbrauchskosten_MB1_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Verbrauchskosten_MB1_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Verbrauchskosten_MB1_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); ">{{Verbrauchskosten_MB1_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Total_Verbrauchskosten_MB1}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Grundpreise im Abrechnungszeitraum</h6>
+    </div>                
+    <div class="energicos_key_components_5cols clearfix">
+      <div class="component" style="width: 22%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style="width: 50%; float:left;">von</div>
+            <div class="side-2" style="width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1 " style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_gp1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_gp2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_gp3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_MB1_gp4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">Total</span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_gp1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_gp2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_gp3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_MB1_gp4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">Blank</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchsmenge<br/> 
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Leistung_MB1_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Leistung_MB1_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Leistung_MB1_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Leistung_MB1_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">5.752</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Abrechnungspreis<br/>
+          in EUR / kw * a
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundpreis_MB1_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundpreis_MB1_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundpreis_MB1_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundpreis_MB1_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Total_Grundpreis_MB1}} </span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Preisänderungs<br/>
+          Faktor
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Änderungsfaktor_MB1_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Änderungsfaktor_MB1_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Änderungsfaktor_MB1_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Änderungsfaktor_MB1_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">blank</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchskosten<br/>
+          netto in EUR
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundkosten_MB1_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundkosten_MB1_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundkosten_MB1_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Grundkosten_MB1_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Total_Grundkosten_MB1}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-energicos clearfix">
+      <div class="horizontal-divider" style="margin-bottom: 15px;"><hr class="energicos-footer-line" style="border-bottom: 0.37px solid #e1e0e5;" /></div>
+      <div class="footer-component" style=" width: 19%; float: left; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        energicos energy Gmbh<br/>
+        Franklinstrasse 9-11<br/>
+        10587 Berlin
+      </div>                  
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Sitz der Gesellschaft:<br/>
+        Berlin Amtsgericht<br/>
+        Charlottenburg<br/>
+        HRB 180072 B USt-IdNr.:<br/>
+        DE813522350
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Geschäftsführung<br/>
+        Dipl.BW (FH) Angelika<br/>
+        Hanke<br/>
+      </div>                  
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00
+      </div>                  
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00<br/>
+        BIC: HYBNAAHRA
+      </div>
+    </div>
+    <div class="energicos-wave" >
+      <img src={{stripe2}} alt="stripe" width="350px"/>
+    </div>                
+  </div>
+</div>
+<div class="utility-bill-container" style="background-color: #fff; margin: auto;">
+  <div class="utility-bill-content"  style="background-color: #fff;margin-top: 50px;">
+    <div class="energicos-logo" style="text-align: right;">
+      <img src={{energicos3}} width="180mm" alt="energicos logo"/>
+    </div>
+    
+    <div class="key-area" style=" color: #666666; margin-top:10px;">
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 12px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Kundenname :</span> {{Kundenname3}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kundenanschrift :</span> {{KD_Strasse3}} {{KD_PLZ_Ort3}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Vertragsnummer :</span> {{Vertragsnummer}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kunden-email :</span>  {{KD_E_Mail2}} </p>
+      
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 0px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Objektnummer :</span> {{Objektnummer}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Lieferadresse :</span> {{Lieferadresse}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Rechungsnummer :</span> {{Rechnungsnummer}}
+      </p>
+      <p class="current-page" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 8px; letter-spacing: 1px;">Seite 2 von 4</p>
+      
+    </div>
+    <div class="address-top clearfix" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 18px; letter-spacing: 0.75px; margin-bottom: 15px;">
+      <div class="address-top-wrap" style="float: right;">
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 3px; display: inline-block;"> <img src={{datumicon3}} style="margin-right:5px; margin-bottom:-4px;" />Datum :</span>  {{Rechnungsdatum}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 3px; display: inline-block;"> <img src={{ansprechpartnericon3}} style="margin-right:5px; margin-bottom:-4px;" />Ansprechpartner :</span> {{Ansprechpartner2}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 3px; display: inline-block;"> <img src={{telefonicon3}} style="margin-right:5px; margin-bottom:-4px;" />Telefon :</span> <span>030/ 520098-122</span>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h5 class="main-title" style="font-family: 'energicos-bold'; color: #404040; letter-spacing: 0.3px; margin-bottom: 5px;">Verbrauchsermittlung und Rechungspositionen Warmwasser</h5>
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Verbräuche Warmwasser im Abrechnungszeitraum</h6>
+    </div>
+    
+    <div class="energicos_key_components_6cols clearfix">
+      <div class="component" style=" width: 14%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zähler<br/> 
+          Nummer
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_PE2_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_PE2_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_PE2_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählernummer_PE2_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">{{Zählernummer_PE2_p5}}</span></li>
+        </ul>
+      </div>
+      <div class="component" style=" width: 21%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style=" width: 50%; float:left;">von</div>
+            <div class="side-2" style=" width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Zeitraum_von_PE2_p5}} </span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Zeitraum_bis_PE2_p5}} </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style=" width: 21%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zählerstand
+          <div class="sub-columns clearfix">
+            <div class="side-1" style=" width: 50%; float:left;">von</div>
+            <div class="side-2" style=" width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_PE2_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_PE2_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_PE2_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_von_PE2_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color: #fff"> {{Zählerstand_von_PE2_p5}}</span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_PE2_p1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_PE2_p2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_PE2_p3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zählerstand_bis_PE2_p4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color#fff;">  {{Zählerstand_bis_PE2_p5}}  </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauch<br/>
+          in kWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_PE2_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_von_PE2_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_PE2_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_Verbrauchseinheit_PE2_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px; "> {{Verbrauch_in_Verbrauchseinheit_PE2_p5}}</span></li>
+        </ul>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Umrechung<br/>
+          Faktor
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrachnungsfaktor_PE2_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_PE2_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_PE2_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Umrechnungsfaktor_PE2_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;"> {{Umrechnungsfaktor_PE2_p5}} </span></li>
+        </ul>
+      </div>
+      <div class="component"  style=" width: 14%; float:left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauch<br/>
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_p1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_p2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_p3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_p4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total"  style="font-family: energicos-bold ; font-size: 11px; ">  {{Verbrauch_in_MWh_PE2_p5}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Verbrauchskosten Warmwasser im Abrechnungszeitraum</h6>
+    </div>                
+    <div class="energicos_key_components_5cols clearfix">
+      <div class="component" style="width: 22%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style="width: 50%; float:left;">von</div>
+            <div class="side-2" style="width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1 " style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style="list-style: none; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_ap1}} </li>
+              <li class="item" style="list-style: none; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_ap2}} </li>
+              <li class="item" style="list-style: none; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_ap3}} </li>
+              <li class="item" style="list-style: none; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_ap4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">Total</span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_ap1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_ap2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_ap3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_ap4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">Blank</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchsmenge<br/> 
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energi2os-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energi4os-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Verbrauch_in_MWh_PE2_ap4}}</li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">5.752</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Abrechnungspreis<br/>
+          in EUR / MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptionprice_PE2_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptionprice_PE2_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptionprice_PE2_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptionprice_PE2_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"></span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Preisänderungs<br/>
+          Fakto1
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energi2os-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energi4os-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">blank</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchskosten<br/>
+          netto in EUR
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptioncosts_PE2_ap1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptioncosts_PE2_ap2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptioncosts_PE2_ap3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{consumptioncosts_PE2_ap4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;"> {{Total_consumptioncosts_PE2}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <h6 class="sub-title" style="font-family: 'energicos-semibold'; color: #404040; letter-spacing: 0.3px; margin-top: -4.5px; margin-bottom: 4px;">Grundkosten Warmwasser im Abrechnungszeitraum</h6>
+    </div>                
+    <div class="energicos_key_components_5cols clearfix">
+      <div class="component" style="width: 22%; float:left;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Zeitraum
+          <div class="sub-columns clearfix">
+            <div class="side-1" style="width: 50%; float:left;">von</div>
+            <div class="side-2" style="width: 50%; float:left;">bis</div>
+          </div>
+        </div>
+        <div class="sub-columns clearfix">
+          <div class="side-1 " style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_gp1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_gp2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_gp3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_von_PE2_gp4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">Total</span></li>
+            </ul>
+          </div>
+          <div class="side-2" style="width: 50%; float:left;">
+            <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_gp1}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_gp2}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_gp3}} </li>
+              <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{Zeitraum_bis_PE2_gp4}} </li>
+              <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">Blank</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchsmenge<br/> 
+          in MWh
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacity_PE2_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacity_PE2_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacity_PE2_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacity_PE2_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">5.752</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Abrechnungspreis<br/>
+          in EUR / kw * a
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacityprice_PE2_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacityprice_PE2_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacityprice_PE2_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacityprice_PE2_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">{{Total_capacityprice_PE2}}</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Preisänderungs<br/>
+          Faktor
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{pricechangefactor_PE2_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total blank" style="font-family: energicos-bold ; font-size: 11px; color:#fff;">blank</span></li>
+        </ul>
+      </div>
+      <div class="component" style="width: 19%; float:left; margin-left:0.5%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Verbrauchskosten<br/>
+          netto in EUR
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; border: 0px;">
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacitycosts_PE2_gp1}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacitycosts_PE2_gp2}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacitycosts_PE2_gp3}} </li>
+          <li class="item" style=" text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "> {{capacitycosts_PE2_gp4}} </li>
+          <li class="item last" style=" border-bottom: 0.37px solid #e1e0e5; text-align: center; padding-top: 6px; padding-bottom: 6px; font-family: energicos-regular; font-size: 11px; letter-spacing: 0.37px;color: #666666; border-top: 0.37px solid rgb(242, 242, 242); "><span class="total" style="font-family: energicos-bold ; font-size: 11px;">  {{Total_capacitycosts_PE2}} </span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-energicos clearfix">
+      <div class="horizontal-divider" style="margin-bottom: 15px;"><hr class="energicos-footer-line" style="border-bottom: 0.37px solid #e1e0e5;" /></div>
+      <div class="footer-component" style=" width: 18.5%; float: left; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        energicos energy Gmbh<br/>
+        Franklinstrasse 9-11<br/>
+        10587 Berlin
+      </div>                  
+      <div class="footer-component" style=" width: 18.5%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Sitz der Gesellschaft:<br/>
+        Berlin Amtsgericht<br/>
+        Charlottenburg<br/>
+        HRB 180072 B USt-IdNr.:<br/>
+        DE813522350
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Geschäftsführung<br/>
+        Dipl.BW (FH) Angelika<br/>
+        Hanke<br/>
+      </div>                  
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00
+      </div>                  
+      <div class="footer-component" style=" width: 22%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00<br/>
+        BIC: HYBNAAHRA
+      </div>
+    </div>
+    <div class="energicos-wave" >
+      <img src={{stripe3}} alt="stripe" width="350px"/>
+    </div>                
+  </div>
+</div>
+<div class="utility-bill-container" style="background-color: #fff; margin: auto;">
+  <div class="utility-bill-content"   style="background-color: #fff; margin-top: 50px;">
+    <div class="energicos-logo" style="text-align: right;">
+      <img src={{energicos4}} width="180mm" alt="energicos logo"/>
+    </div>
+    
+    <div class="key-area" style=" color: #666666; margin-top:10px;">
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 12px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Kundenname :</span>{{Kundenname4}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kundenanschrift :</span>{{KD_Strasse4}} {{KD_PLZ_Ort4}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Vertragsnummer :</span>  {{Vertragsnummer2}}<br/>
+      <span class="energicos-important" style="font-family: 'energicos-bold';">Kunden-email :</span> {{KD_E_Mail3}} </p>
+      
+      <p style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 16px; letter-spacing: 0.75px; margin-bottom: 0px;"><span class="energicos-important" style="font-family: 'energicos-bold';">Objektnummer :</span> {{Objektnummer2}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Lieferadresse :</span> {{Lieferadresse2}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold';">Rechungsnummer :</span> {{Rechnungsnummer2}}
+      </p>
+      <p class="current-page" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 8px; letter-spacing: 1px;">Seite 2 von 4</p>
+      
+    </div>
+    <div class="address-top clearfix" style="font-family: 'energicos-regular'; font-size: 13px; color: #666666; line-height: 18px; letter-spacing: 0.75px; margin-bottom: 15px;">
+      <div class="address-top-wrap" style="float: right;">
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{datumicon4}} style="margin-right:5px; margin-bottom:-4px;margin-top: -10px;" /> Datum :</span>  {{Rechnungsdatum2}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 7px; display: inline-block;"> <img src={{ansprechpartnericon4}} style="margin-right:-2px; margin-bottom:-4px;margin-top: -5px;" /> Ansprechpartner :</span> {{Ansprechpartner3}}<br/>
+        <span class="energicos-important" style="font-family: 'energicos-bold'; margin-bottom: 5px; display: inline-block;"> <img src={{telefonicon4}} style="margin-right:5px; margin-bottom:-4px; margin-top: -10px;" /> Telefon :</span> <span>030/ 520098-122</span>
+      </div>
+    </div>
+    <div class="energicos-content" >
+      <h5 class="main-title" style="font-family: 'energicos-bold'; color: #404040; letter-spacing: 0.3px; margin-bottom: 5px; margin-top: 0px;">Referenzwerte</h5>
+    </div>
+
+    <div class="energicos_key_components_4cols clearfix">
+      <div class="component component-header-blank" style="width: 33%; float: left; margin-top: 32px;">
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px;">
+          <li class="item-left"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242);"> {{Verbrauch}}</li>
+          <li class="item-left"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242);">{{Energieentgelte}}    </li>
+          <li class="item-left"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242);"> {{Gaspreis_Mittel_Jahr}} </li>
+          <li class="item-left last" style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); border-bottom: 0.1mm solid #e1e0e5;"> {{Verbrauch_je_m²}} </li>
+        </ul>
+      </div>
+      <div class="component" style="width: 27%; float: left; margin-left:0.3%;">
+        <div class="component-header2" style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Abrechnungsperiode
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px;">
+          <li class="item" style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;"> 35,567 MWh</li>
+          <li class="item" style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;">3,470.56 EUR</li>
+          <li class="item" style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;">44.50 EUR/MWh</li>
+          <li class="item last" style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); border-bottom: 0.1mm solid #e1e0e5; text-align: center;">105 kWh/m2</li>
+        </ul>
+      </div>
+      <div class="component" style="width: 27%; float: left; margin-left:0.3%;">
+        <div class="component-header2"  style="background-color: #f5f5f5; width: 100%; padding-top: 7.5px; padding-bottom: 7.5px; text-align: center; border-bottom: solid 0.3px #c30017; margin-bottom: 0.3px; font-family: 'energicos-regular'; font-size: 13px; color: #404040;">
+          Vorperiode
+        </div>
+        <ul class="items" style="padding-left: 0px; list-style: none; width: 100%; margin-top: 0px; text-align: center;">
+          <li class="item"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;">35,567 MWh</li>
+          <li class="item"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;">3,470.56 EUR</li>
+          <li class="item"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); text-align: center;">44.50 EUR/MWh</li>
+          <li class="item last"  style="text-align: left; padding-top: 6px; padding-bottom: 6px; font-family: 'energicos-regular'; font-size: 11px; letter-spacing: 0.3px; color: #666666;border-top: 0.3px solid rgb(242, 242, 242); border-bottom: 0.1mm solid #e1e0e5; text-align: center;">105 kWh/m2</li>
+        </ul>
+      </div>
+    </div>
+    <div class="energicos-content">
+      <div class="energicos-red"  style="background-color: rgb(195, 0, 23); height: 0.7px; margin-top: 11px; margin-bottom: 11px;"></div>
+      <h5 class="main-title"  style="font-family: 'energicos-bold'; color: #404040; letter-spacing: 0.3px; margin-bottom: 5px;  margin-top: 0px;">Aufteilung Wärme/ Warmwasser</h5>
+    </div>
+
+    <div class="energicos_key_components_2cols clearfix"  style="font-size: 11px; font-family: 'energicos-regular'; color: #4a4a4a; line-height: 17px;">
+      <div class="side-1-energicos" style=" width:26.5%;  float: left;">
+        <img src={{piechart}} width="180px" alt="Pie Chart" />
+      </div>
+
+      <div class="side-2-energicos" style=" width: 68.5%; margin-left:2%; float: left;">
+        <p class="Aufteilung-spacer" style="margin-top:30px;">Die Heizkostenverordnung sieht vor, die Kosten für Wärme für Heizzwecke und Warmwasseraufbereitung aufzuteilen. Dazu müssen seit 2013 separate Warmwasserzähler installiert sein. Der Warmwasseranteil sollte nicht höher als 18% der Gesamtwärmekosten liegen. Insbesondere ein Abgleich der Warmwasser-Zirkulationssystems kann hierbei zu erheblichen Einsparungen führen. Wir setzen das gern mit Ihnen zusammen um, sprechen Sie uns bitte an!</p>
+      </div>
+    </div>
+
+    <div class="energicos-content">
+      <div class="energicos-red" style="background-color: rgb(195, 0, 23); height: 0.7px; margin-top: 11px; margin-bottom: 11px;"></div>
+      <h5 class="main-title"  style="font-family: 'energicos-bold'; color: #404040; letter-spacing: 0.3px; margin-bottom: 5px;  margin-top: 0px;">Betriebskostenoptimierung</h5>
+    </div>
+
+    <div class="energicos_key_components_2cols clearfix" style="font-size: 11px; font-family: 'energicos-regular'; color: #4a4a4a; line-height: 17px;">
+      <div class="side-1-energicos" style="width:  48%; float: left;">
+        <p style="margin-top: 0px; margin-bottom:5px;">Mit der Darstellung der Gebäude Energieeffizienzklassen soll, ähnlich wie bereits bei Haushaltsgeräten üblich, Kauf- oder Mietinteressenten eine schnelle Einordnung des energetischen Zustands des Gebäudes ermöglicht werden.Im Sinne einer maximalen Betriebskostenoptimierung sollten Mieter, Gebäudebesitzer und Energielieferant in dieser Hinsicht an einem Strang ziehen um den Verbrauch des Gebäudes je m2 zu minimieren. Wenn Sie daran interessiert sind, rufen Sie uns bitte an!</p>
+      </div>
+
+      <div class="side-2-energicos" style=" width: 48%; float: left; margin-left: 2%; ">
+        <img src={{graphickey}} width="360px" alt="graphics-key"/>
+        </div>
+    </div>
+
+    <div class="footer-energicos clearfix">
+      <div class="horizontal-divider" style="margin-bottom: 15px;"><hr class="energicos-footer-line" style="border-bottom: 0.37px solid #e1e0e5;" /></div>
+      <div class="footer-component" style=" width: 18.5%; float: left; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        energicos energy Gmbh<br/>
+        Franklinstrasse 9-11<br/>
+        10587 Berlin
+      </div>
+      
+      <div class="footer-component" style=" width: 18.5%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Sitz der Gesellschaft:<br/>
+        Berlin Amtsgericht<br/>
+        Charlottenburg<br/>
+        HRB 180072 B USt-IdNr.:<br/>
+        DE813522350
+      </div>
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Geschäftsführung<br/>
+        Dipl.BW (FH) Angelika<br/>
+        Hanke<br/>
+      </div>
+      
+      <div class="footer-component" style=" width: 19%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00
+      </div>
+
+      
+      <div class="footer-component" style=" width: 22%; float: left; margin-left: 0.75%; font-family: energicos-regular; color: #4a4a4a; font-size: 10px; letter-spacing: 0.5px; line-height: 14px;">
+        Hypovereinsbank<br/>
+        Konto: 2245343<br/>
+        IBAN: DE23235434846446554<br/>
+        BLZ: 100 500 00<br/>
+        BIC: HYBNAAHRA
+      </div>
+    </div>
+
+    <div class="energicos-wave" >
+      <img src={{stripe4}} alt="stripe" width="350px"/>
+    </div>
+  </div>
+</div>
+</body>
+</html>
